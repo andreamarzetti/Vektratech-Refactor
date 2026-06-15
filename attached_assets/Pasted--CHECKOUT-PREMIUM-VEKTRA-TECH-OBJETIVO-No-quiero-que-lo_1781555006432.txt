@@ -1,0 +1,250 @@
+# CHECKOUT PREMIUM VEKTRA TECH
+
+## OBJETIVO
+
+No quiero que los clientes simplemente agreguen productos al carrito.
+
+Quiero un flujo completo de compra profesional similar a Pedix, Tiendanube y Shopify.
+
+---
+
+# FLUJO DE COMPRA
+
+## Paso 1: Datos personales
+
+Solicitar:
+
+* Nombre y apellido
+* Teléfono
+* Email (opcional)
+* Observaciones
+
+Validaciones obligatorias.
+
+---
+
+## Paso 2: Entrega
+
+Opciones:
+
+### Consumo en local
+
+### Retiro en sucursal
+
+### Envío a domicilio
+
+Si selecciona envío:
+
+Mostrar:
+
+* Dirección
+* Número
+* Piso
+* Departamento
+* Localidad
+* Código postal
+
+Calcular costo de envío automáticamente.
+
+---
+
+## Paso 3: Pago
+
+Opciones:
+
+### Efectivo
+
+Aplicar descuento configurable.
+
+### Transferencia bancaria
+
+Mostrar alias y datos.
+
+### Mercado Pago
+
+Pago online real.
+
+### Ualá Bis
+
+Pago online real.
+
+### Tarjeta de débito
+
+### Tarjeta de crédito
+
+---
+
+# CUPONES
+
+Agregar sistema de cupones.
+
+Ejemplos:
+
+BIENVENIDO10
+VERANO15
+CLIENTEVIP
+
+Configurables desde el panel.
+
+Mostrar:
+
+"Descuento aplicado correctamente."
+
+---
+
+# FACTURACIÓN
+
+Checkbox:
+
+Solicitar factura
+
+Si se activa:
+
+Pedir:
+
+* Razón social
+* CUIT
+* Dirección fiscal
+
+Guardar en el pedido.
+
+---
+
+# RESUMEN
+
+Antes de finalizar:
+
+Mostrar:
+
+Productos
+Subtotal
+Descuento
+Envío
+Total final
+
+Confirmar pedido.
+
+---
+
+# PEDIDO POR WHATSAPP
+
+Agregar botón:
+
+"Pedir por WhatsApp"
+
+Generar automáticamente:
+
+Hola, quiero realizar el siguiente pedido:
+
+Nombre:
+Teléfono:
+
+Productos:
+
+* Producto A
+* Producto B
+
+Total:
+
+Forma de pago:
+
+Forma de entrega:
+
+Dirección:
+
+Enviar al WhatsApp configurado por el comercio.
+
+---
+
+# NOTIFICACIÓN AL DUEÑO
+
+Cuando se genera un pedido:
+
+Enviar automáticamente:
+
+WhatsApp al dueño
+
+Con:
+
+Número de pedido
+Cliente
+Teléfono
+Productos
+Total
+Método de pago
+Dirección
+
+---
+
+# PANEL DE PEDIDOS
+
+Estados:
+
+Nuevo
+Confirmado
+Preparando
+En camino
+Entregado
+Cancelado
+
+Actualizar desde el dashboard.
+
+---
+
+# CHECKOUT MULTIRUBRO
+
+El sistema debe funcionar para:
+
+* Restaurantes
+* Dietéticas
+* Tiendas de ropa
+* Ferreterías
+* Kioscos
+* Distribuidoras
+
+Sin cambios de código.
+
+---
+
+# MERCADO PAGO
+
+Implementar integración real.
+
+Permitir:
+
+* Checkout Pro
+* Checkout API
+* Webhooks
+
+Actualizar automáticamente el estado del pedido cuando el pago sea aprobado.
+
+---
+
+# RECUPERACIÓN DE CARRITO
+
+Si el cliente abandona la compra:
+
+Guardar carrito localmente.
+
+Recuperarlo cuando vuelva.
+
+---
+
+# EXPERIENCIA PREMIUM
+
+Diseño moderno.
+
+Wizard visual:
+
+1 Datos
+2 Entrega
+3 Pago
+4 Resumen
+
+Mostrar barra de progreso.
+
+Animaciones suaves.
+
+Totalmente responsive.
+
+Debe sentirse como una plataforma SaaS profesional de nivel comercial.

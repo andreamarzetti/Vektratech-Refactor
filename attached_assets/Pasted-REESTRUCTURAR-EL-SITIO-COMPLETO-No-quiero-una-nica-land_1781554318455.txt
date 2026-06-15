@@ -1,0 +1,439 @@
+REESTRUCTURAR EL SITIO COMPLETO
+
+No quiero una única landing page larga.
+
+Quiero una estructura profesional con múltiples páginas y navegación real.
+
+NUEVA ESTRUCTURA
+Inicio
+
+URL:
+
+/
+
+Mostrar:
+
+Hero principal
+Beneficios
+CTA
+Resumen de la plataforma
+Soluciones
+
+URL:
+
+/soluciones
+
+Mostrar:
+
+Restaurantes
+Kioscos
+Dietéticas
+Ferreterías
+Tiendas de ropa
+Distribuidoras
+
+Cada rubro con su explicación.
+
+Demos
+
+URL:
+
+/demos
+
+Mostrar todas las demos disponibles.
+
+Demo Restaurante
+
+URL:
+
+/demos/restaurante
+
+Demo completa.
+
+Demo Tienda de Ropa
+
+URL:
+
+/demos/ropa
+
+Demo completa.
+
+Demo Dietética
+
+URL:
+
+/demos/dietetica
+
+Demo completa.
+
+Demo Ferretería
+
+URL:
+
+/demos/ferreteria
+
+Demo completa.
+
+Demo Kiosco
+
+URL:
+
+/demos/kiosco
+
+Demo completa.
+
+Funcionalidades
+
+URL:
+
+/funcionalidades
+
+Mostrar:
+
+Gestión de pedidos
+Catálogo
+CRM
+IA
+Reportes
+Cobros
+
+Con capturas y explicaciones.
+
+Precios
+
+URL:
+
+/precios
+
+Mostrar:
+
+Starter
+
+$25.000/mes
+
+Pro
+
+$49.950/mes
+
+Explicar claramente:
+
+qué incluye
+qué no incluye
+cómo funciona la suscripción
+Casos de Éxito
+
+URL:
+
+/casos-de-exito
+
+Preparar estructura para testimonios futuros.
+
+FAQ
+
+URL:
+
+/faq
+
+Preguntas frecuentes.
+
+Contacto
+
+URL:
+
+/contacto
+
+Formulario.
+
+WhatsApp.
+
+Email.
+
+Sobre Nosotros
+
+URL:
+
+/nosotros
+
+Explicar:
+
+Vektra Tech desarrolla soluciones tecnológicas para digitalizar negocios y aumentar ventas mediante comercio electrónico e inteligencia artificial.
+
+PANEL CLIENTE
+
+Separar completamente del sitio comercial.
+
+URL:
+
+/app
+
+o
+
+/dashboard
+
+Aquí ingresa el cliente.
+
+LOGIN
+
+URL:
+
+/login
+
+Acceso de clientes.
+
+ADMINISTRADOR VEKTRA TECH
+
+URL:
+
+/admin
+
+Solo para el dueño de la plataforma.
+
+Desde aquí administrar:
+
+clientes
+pagos
+planes
+suspensiones
+demos
+MENÚ SUPERIOR
+
+Inicio
+
+Soluciones
+
+Demos
+
+Funcionalidades
+
+Precios
+
+FAQ
+
+Contacto
+
+Ingresar
+
+OBJETIVO
+
+La web debe sentirse como una empresa SaaS profesional.
+
+No como una landing page larga.
+
+La navegación debe ser moderna, organizada y preparada para crecer.
+
+Además, Andrea, una cosa que agregaría porque te va a ayudar a vender:
+
+Calculadora de precio
+
+Página:
+
+/calculadora
+
+El cliente elige:
+
+Rubro
+Cantidad de productos
+Si quiere IA
+Si quiere CRM
+
+Y al final le muestra:
+
+Plan recomendado: PRO
+
+Eso da mucha sensación de producto profesional y ayuda a cerrar ventas.
+
+Revisá el sistema de login actual y verificá si la autenticación es real o simplemente simulada. Si cualquier usuario puede ingresar con cualquier contraseña, corregirlo inmediatamente.
+
+Y además pedile esto:
+
+AUTENTICACIÓN REAL
+
+Implementar autenticación real.
+
+Requisitos
+Registro de usuarios.
+Inicio de sesión con email y contraseña.
+Contraseñas encriptadas (nunca guardar texto plano).
+Mantener sesión iniciada.
+Cerrar sesión.
+Recuperar contraseña.
+Protección de rutas privadas.
+Roles
+Cliente
+
+Puede acceder únicamente a:
+
+Su negocio
+Sus productos
+Sus pedidos
+Sus clientes
+
+Nunca puede ver información de otros negocios.
+
+Administrador Vektra Tech
+
+Acceso exclusivo a:
+
+/admin
+
+Puede:
+
+Ver clientes
+Activar cuentas
+Suspender cuentas
+Ver planes
+Ver pagos
+Multiempresa
+
+Cada negocio debe tener sus propios datos.
+
+Ejemplo:
+
+FerreMax
+
+No puede ver datos de:
+
+Urban Style
+
+Ni de:
+
+Sabores del Barrio
+Suspensión
+
+Si el cliente está suspendido:
+
+Mostrar:
+
+Tu suscripción está vencida.
+
+Y bloquear el acceso a la plataforma.
+
+# MEJORA COMPLETA DEL ASISTENTE IA DE VEKTRAHUB
+
+La IA actual es demasiado básica.
+
+Necesito que funcione como un verdadero asistente comercial para los clientes finales del negocio.
+
+---
+
+## SUGERENCIAS DE PREGUNTAS
+
+Al abrir el chat mostrar ejemplos como:
+
+* ¿Cuál es el producto más vendido?
+* ¿Qué promociones tienen hoy?
+* ¿Cuál me recomendás?
+* ¿Qué opciones tienen para principiantes?
+* ¿Cuál es la diferencia entre estos productos?
+* ¿Tienen envío?
+* ¿Qué medios de pago aceptan?
+* ¿Cuánto tarda la entrega?
+* ¿Cuál tiene mejor relación precio/calidad?
+
+Las sugerencias deben cambiar según el tipo de negocio.
+
+---
+
+## RESPUESTAS LIBRES
+
+El cliente debe poder escribir cualquier pregunta.
+
+Ejemplos:
+
+* ¿Cuál me conviene comprar?
+* ¿Qué producto es mejor para mí?
+* ¿Cuál es el más económico?
+* ¿Qué me recomendás para empezar?
+* ¿Qué promociones tienen?
+* ¿Cuál tiene más stock?
+* ¿Qué incluye este producto?
+
+La IA debe responder de forma natural utilizando los productos cargados por el comercio.
+
+---
+
+## IA CONECTADA AL CATÁLOGO
+
+La IA debe leer:
+
+* Productos
+* Categorías
+* Precios
+* Descripciones
+* Promociones
+* Stock
+
+Y responder usando esa información.
+
+No debe inventar datos.
+
+---
+
+## RECOMENDACIONES INTELIGENTES
+
+Ejemplos:
+
+Si el cliente pregunta:
+
+"Quiero algo económico"
+
+La IA recomienda productos baratos.
+
+Si pregunta:
+
+"Quiero algo premium"
+
+La IA recomienda productos de mayor valor.
+
+Si pregunta:
+
+"No sé cuál elegir"
+
+La IA compara opciones.
+
+---
+
+## RESPUESTAS SOBRE EL NEGOCIO
+
+Debe responder:
+
+* Horarios
+* Ubicación
+* Métodos de pago
+* Zonas de entrega
+* Costos de envío
+* Políticas de devolución
+
+Todo configurable por cada negocio.
+
+---
+
+## EXPERIENCIA TIPO CHATGPT
+
+La conversación debe sentirse natural.
+
+No limitarse a botones.
+
+El usuario debe poder escribir libremente y recibir respuestas completas.
+
+---
+
+## ESCALABILIDAD
+
+Preparar la arquitectura para futura integración con OpenAI o modelos equivalentes.
+
+El objetivo es que la IA sea uno de los principales diferenciales comerciales de VektraHub."Ayudame a elegir"
+
+Por ejemplo, un cliente entra a una dietética y escribe:
+
+"Tengo presupuesto de $20.000 y quiero aumentar proteína."
+
+La IA le arma una recomendación usando los productos del catálogo.
+
+O en una ferretería:
+
+"Necesito herramientas para pintar una habitación."
+
+Y la IA le arma una lista de productos.
+
+Eso sí hace que parezca una plataforma moderna y no solamente un catálogo online con un chat decorativo.

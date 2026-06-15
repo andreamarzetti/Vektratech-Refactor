@@ -1,0 +1,1 @@
+- [VektraHub architecture](vektrahub-arch.md) — multi-tenant SaaS Argentina, Clerk auth, admin role via DB, OpenAPI-first
