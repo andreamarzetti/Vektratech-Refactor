@@ -30,6 +30,11 @@ import AsistenteIA from "@/pages/app/AsistenteIA";
 import Perfil from "@/pages/app/Perfil";
 import Onboarding from "@/pages/app/Onboarding";
 import Suspended from "@/pages/app/Suspended";
+import MiTienda from "@/pages/app/MiTienda";
+import Cupones from "@/pages/app/Cupones";
+
+// Store pages (public)
+import StoreFront from "@/pages/store/StoreFront";
 
 // Admin pages
 import AdminDashboard from "@/pages/admin/AdminDashboard";
@@ -171,6 +176,8 @@ function AppRoute() {
       <Route path="/app/pedidos" component={Pedidos} />
       <Route path="/app/clientes" component={Clientes} />
       <Route path="/app/ia" component={AsistenteIA} />
+      <Route path="/app/mi-tienda" component={MiTienda} />
+      <Route path="/app/cupones" component={Cupones} />
       <Route path="/app/perfil" component={Perfil} />
       <Route component={NotFound} />
     </Switch>
@@ -245,6 +252,9 @@ function ClerkProviderWithRoutes() {
               <Show when="signed-in"><Redirect to="/app" /></Show>
               <Show when="signed-out"><Home /></Show>
             </Route>
+            {/* Public store */}
+            <Route path="/tienda/:slug" component={StoreFront} />
+
             <Route path="/soluciones" component={Soluciones} />
             <Route path="/demos/:rubro" component={DemoRubro} />
             <Route path="/demos" component={Demos} />

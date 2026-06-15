@@ -1,4 +1,4 @@
-import { pgTable, text, serial, integer, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, timestamp, numeric, unique } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod/v4";
 import { usersTable } from "./users";
@@ -12,8 +12,15 @@ export const businessesTable = pgTable("businesses", {
   }).notNull(),
   plan: text("plan", { enum: ["starter", "pro"] }).notNull().default("starter"),
   status: text("status", { enum: ["active", "suspended", "trial"] }).notNull().default("trial"),
+  slug: text("slug"),
+  whatsappNumber: text("whatsapp_number"),
+  mpAccessToken: text("mp_access_token"),
+  shippingCost: numeric("shipping_cost", { precision: 10, scale: 2 }),
+  cashDiscount: integer("cash_discount"),
+  bankAlias: text("bank_alias"),
+  bankHolder: text("bank_holder"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
-});
+}, (t) => [unique("businesses_slug_unique").on(t.slug)]);
 
 export const insertBusinessSchema = createInsertSchema(businessesTable).omit({ id: true, createdAt: true });
 export type InsertBusiness = z.infer<typeof insertBusinessSchema>;

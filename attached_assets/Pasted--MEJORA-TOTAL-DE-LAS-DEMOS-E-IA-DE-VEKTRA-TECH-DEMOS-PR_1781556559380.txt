@@ -1,0 +1,269 @@
+# MEJORA TOTAL DE LAS DEMOS E IA DE VEKTRA TECH
+
+## DEMOS PROFESIONALES
+
+Las demos actuales todavía se sienten como ejemplos básicos.
+
+Quiero que parezcan negocios reales funcionando.
+
+No mostrar solamente productos.
+
+Crear experiencias completas.
+
+---
+
+# DEMO DIETÉTICA
+
+Nombre:
+
+NutriLife Market
+
+Mostrar:
+
+* Banner principal
+* Productos destacados
+* Proteínas
+* Creatinas
+* Vitaminas
+* Snacks saludables
+* Promociones
+
+Agregar IA especializada.
+
+Ejemplos:
+
+"Tengo $20.000 para proteína"
+
+"Soy principiante"
+
+"Quiero aumentar masa muscular"
+
+La IA debe recomendar productos reales del catálogo.
+
+---
+
+# DEMO FERRETERÍA
+
+Nombre:
+
+FerreMax
+
+Mostrar:
+
+* Herramientas
+* Pinturas
+* Construcción
+* Electricidad
+
+Ejemplos IA:
+
+"Necesito pintar una habitación"
+
+"Quiero arreglar una pérdida"
+
+"Qué herramientas básicas necesito"
+
+La IA debe armar listas completas de compra.
+
+---
+
+# DEMO TIENDA DE ROPA
+
+Nombre:
+
+Urban Style
+
+Mostrar:
+
+* Hombre
+* Mujer
+* Accesorios
+
+Ejemplos IA:
+
+"Necesito un outfit para una fiesta"
+
+"Busco algo económico"
+
+"Quiero algo elegante"
+
+La IA recomienda productos y combina artículos.
+
+---
+
+# DEMO KIOSCO
+
+Nombre:
+
+Kiosco 24
+
+Mostrar:
+
+* Bebidas
+* Golosinas
+* Snacks
+
+Ejemplos IA:
+
+"Quiero algo para compartir"
+
+"Tengo $5.000"
+
+"Qué promociones tienen"
+
+---
+
+# DEMO RESTAURANTE
+
+Nombre:
+
+Burger House
+
+Mostrar:
+
+* Hamburguesas
+* Papas
+* Bebidas
+* Combos
+
+Ejemplos IA:
+
+"Tengo hambre y quiero gastar menos de $15.000"
+
+"Recomendame un combo"
+
+"Qué hamburguesa es la más vendida"
+
+---
+
+# IA COMERCIAL REAL
+
+La IA actual es demasiado simple.
+
+Debe comportarse como un vendedor profesional.
+
+No responder solamente preguntas.
+
+Debe ayudar a vender.
+
+---
+
+# CONTEXTO DE NEGOCIO
+
+La IA debe conocer:
+
+* Productos
+* Categorías
+* Precios
+* Stock
+* Promociones
+* Horarios
+* Métodos de pago
+* Costos de envío
+* Dirección
+
+---
+
+# RECOMENDACIONES
+
+Si el usuario dice:
+
+"Quiero algo económico"
+
+Mostrar productos baratos.
+
+Si dice:
+
+"Quiero algo premium"
+
+Mostrar productos premium.
+
+Si dice:
+
+"No sé cuál elegir"
+
+Comparar productos.
+
+---
+
+# VENTA CONSULTIVA
+
+Ejemplo:
+
+Usuario:
+
+"Tengo $20.000"
+
+IA:
+
+"Con ese presupuesto te recomiendo estas opciones..."
+
+Mostrando productos reales.
+
+---
+
+# RESPUESTAS NATURALES
+
+No responder como bot.
+
+Hablar como vendedor humano.
+
+Ejemplo:
+
+"Si estás empezando, te recomendaría esta proteína porque tiene muy buena relación precio/calidad."
+
+---
+
+# PRODUCTOS RELACIONADOS
+
+Cuando recomienda un producto:
+
+Mostrar complementos.
+
+Ejemplo:
+
+Proteína
+
+→ Creatina
+
+→ Shaker
+
+→ Barra proteica
+
+---
+
+# IA CON MEMORIA DE CONVERSACIÓN
+
+La IA debe recordar mensajes anteriores.
+
+Ejemplo:
+
+Usuario:
+
+"Busco algo económico"
+
+Luego:
+
+"Y algo más premium"
+
+La IA debe entender el contexto.
+
+---
+
+# SUGERENCIAS DINÁMICAS
+
+Mostrar preguntas rápidas según rubro.
+
+No usar sugerencias genéricas.
+
+Cada rubro debe tener sugerencias específicas.
+
+---
+
+# DIFERENCIAL DE VEKTRA TECH
+
+La IA debe convertirse en uno de los principales motivos para contratar la plataforma.
+
+Debe sentirse más cercana a ChatGPT que a un chatbot tradicional.
+
+Debe ayudar al cliente a comprar y aumentar la conversión de ventas.

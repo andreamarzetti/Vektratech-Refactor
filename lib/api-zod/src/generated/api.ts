@@ -444,3 +444,263 @@ export const AdminGetStatsResponse = zod.object({
 })
 
 
+/**
+ * @summary Get public store info
+ */
+export const GetStoreInfoParams = zod.object({
+  "slug": zod.coerce.string()
+})
+
+export const GetStoreInfoResponse = zod.object({
+  "name": zod.string(),
+  "sector": zod.string(),
+  "whatsappNumber": zod.string().nullish(),
+  "shippingCost": zod.number().nullish(),
+  "cashDiscount": zod.number().nullish(),
+  "bankAlias": zod.string().nullish(),
+  "bankHolder": zod.string().nullish(),
+  "plan": zod.string(),
+  "hasMpEnabled": zod.boolean()
+})
+
+
+/**
+ * @summary Get public catalog
+ */
+export const ListStoreProductsParams = zod.object({
+  "slug": zod.coerce.string()
+})
+
+export const ListStoreProductsResponseItem = zod.object({
+  "id": zod.number(),
+  "name": zod.string(),
+  "description": zod.string().nullish(),
+  "price": zod.number(),
+  "category": zod.string().nullish(),
+  "stock": zod.number().nullish(),
+  "imageUrl": zod.string().nullish(),
+  "active": zod.boolean(),
+  "createdAt": zod.coerce.date()
+})
+export const ListStoreProductsResponse = zod.array(ListStoreProductsResponseItem)
+
+
+/**
+ * @summary Create an order from the public store
+ */
+export const CreateStoreOrderParams = zod.object({
+  "slug": zod.coerce.string()
+})
+
+export const CreateStoreOrderBody = zod.object({
+  "customerName": zod.string(),
+  "customerPhone": zod.string(),
+  "customerEmail": zod.string().optional(),
+  "items": zod.array(zod.object({
+  "productId": zod.number(),
+  "productName": zod.string(),
+  "quantity": zod.number(),
+  "unitPrice": zod.number()
+})),
+  "deliveryType": zod.enum(['local', 'pickup', 'delivery']),
+  "deliveryAddress": zod.object({
+  "street": zod.string(),
+  "number": zod.string(),
+  "floor": zod.string().optional(),
+  "apt": zod.string().optional(),
+  "city": zod.string(),
+  "zip": zod.string().optional()
+}).optional(),
+  "paymentMethod": zod.enum(['cash', 'transfer', 'mercadopago', 'debit', 'credit']),
+  "couponCode": zod.string().optional(),
+  "discountAmount": zod.number().optional(),
+  "shippingAmount": zod.number().optional(),
+  "needsInvoice": zod.boolean().optional(),
+  "invoiceData": zod.object({
+  "razonSocial": zod.string().optional(),
+  "cuit": zod.string().optional(),
+  "address": zod.string().optional()
+}).optional(),
+  "notes": zod.string().optional()
+})
+
+
+/**
+ * @summary AI chat for the public store
+ */
+export const StoreChatParams = zod.object({
+  "slug": zod.coerce.string()
+})
+
+export const StoreChatBody = zod.object({
+  "message": zod.string(),
+  "history": zod.array(zod.object({
+  "role": zod.enum(['user', 'assistant']),
+  "content": zod.string()
+})).optional()
+})
+
+export const StoreChatResponse = zod.object({
+  "reply": zod.string(),
+  "suggestions": zod.array(zod.string()).optional()
+})
+
+
+/**
+ * @summary Validate a coupon
+ */
+export const ValidateStoreCouponParams = zod.object({
+  "slug": zod.coerce.string()
+})
+
+export const ValidateStoreCouponBody = zod.object({
+  "code": zod.string(),
+  "subtotal": zod.number()
+})
+
+export const ValidateStoreCouponResponse = zod.object({
+  "valid": zod.boolean(),
+  "type": zod.enum(['percentage', 'fixed']).optional(),
+  "value": zod.number().optional(),
+  "discountAmount": zod.number().optional(),
+  "message": zod.string()
+})
+
+
+/**
+ * @summary Create a Mercado Pago preference
+ */
+export const CreateMpPreferenceParams = zod.object({
+  "slug": zod.coerce.string()
+})
+
+export const CreateMpPreferenceBody = zod.object({
+  "items": zod.array(zod.object({
+  "productId": zod.number(),
+  "productName": zod.string(),
+  "quantity": zod.number(),
+  "unitPrice": zod.number()
+})),
+  "backUrl": zod.string()
+})
+
+export const CreateMpPreferenceResponse = zod.object({
+  "initPoint": zod.string(),
+  "preferenceId": zod.string()
+})
+
+
+/**
+ * @summary Get business configuration
+ */
+export const GetBusinessConfigResponse = zod.object({
+  "id": zod.number(),
+  "name": zod.string(),
+  "sector": zod.string(),
+  "plan": zod.string(),
+  "status": zod.string(),
+  "slug": zod.string().nullish(),
+  "whatsappNumber": zod.string().nullish(),
+  "shippingCost": zod.number().nullish(),
+  "cashDiscount": zod.number().nullish(),
+  "bankAlias": zod.string().nullish(),
+  "bankHolder": zod.string().nullish(),
+  "hasMpToken": zod.boolean()
+})
+
+
+/**
+ * @summary Update business configuration
+ */
+export const UpdateBusinessConfigBody = zod.object({
+  "slug": zod.string().optional(),
+  "whatsappNumber": zod.string().optional(),
+  "shippingCost": zod.number().optional(),
+  "cashDiscount": zod.number().optional(),
+  "bankAlias": zod.string().optional(),
+  "bankHolder": zod.string().optional(),
+  "mpAccessToken": zod.string().optional()
+})
+
+export const UpdateBusinessConfigResponse = zod.object({
+  "id": zod.number(),
+  "name": zod.string(),
+  "sector": zod.string(),
+  "plan": zod.string(),
+  "status": zod.string(),
+  "slug": zod.string().nullish(),
+  "whatsappNumber": zod.string().nullish(),
+  "shippingCost": zod.number().nullish(),
+  "cashDiscount": zod.number().nullish(),
+  "bankAlias": zod.string().nullish(),
+  "bankHolder": zod.string().nullish(),
+  "hasMpToken": zod.boolean()
+})
+
+
+/**
+ * @summary List coupons for the current business
+ */
+export const ListCouponsResponseItem = zod.object({
+  "id": zod.number(),
+  "code": zod.string(),
+  "type": zod.enum(['percentage', 'fixed']),
+  "value": zod.number(),
+  "active": zod.boolean(),
+  "maxUses": zod.number().nullish(),
+  "usedCount": zod.number(),
+  "expiresAt": zod.coerce.date().nullish(),
+  "createdAt": zod.coerce.date()
+})
+export const ListCouponsResponse = zod.array(ListCouponsResponseItem)
+
+
+/**
+ * @summary Create a coupon
+ */
+export const CreateCouponBody = zod.object({
+  "code": zod.string(),
+  "type": zod.enum(['percentage', 'fixed']),
+  "value": zod.number(),
+  "maxUses": zod.number().optional(),
+  "expiresAt": zod.coerce.date().optional()
+})
+
+
+/**
+ * @summary Update a coupon
+ */
+export const UpdateCouponParams = zod.object({
+  "id": zod.coerce.number()
+})
+
+export const UpdateCouponBody = zod.object({
+  "code": zod.string().optional(),
+  "type": zod.enum(['percentage', 'fixed']).optional(),
+  "value": zod.number().optional(),
+  "active": zod.boolean().optional(),
+  "maxUses": zod.number().optional(),
+  "expiresAt": zod.coerce.date().optional()
+})
+
+export const UpdateCouponResponse = zod.object({
+  "id": zod.number(),
+  "code": zod.string(),
+  "type": zod.enum(['percentage', 'fixed']),
+  "value": zod.number(),
+  "active": zod.boolean(),
+  "maxUses": zod.number().nullish(),
+  "usedCount": zod.number(),
+  "expiresAt": zod.coerce.date().nullish(),
+  "createdAt": zod.coerce.date()
+})
+
+
+/**
+ * @summary Delete a coupon
+ */
+export const DeleteCouponParams = zod.object({
+  "id": zod.coerce.number()
+})
+
+

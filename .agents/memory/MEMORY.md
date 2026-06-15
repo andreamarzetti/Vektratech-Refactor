@@ -1,1 +1,3 @@
 - [VektraHub architecture](vektrahub-arch.md) — multi-tenant SaaS Argentina, Clerk auth, admin role via DB, OpenAPI-first
+- [Drizzle push in non-TTY](drizzle-push-non-tty.md) — drizzle-kit push fails interactively in bash; use direct SQL for migrations when rows exist.
+- [Orval inline body naming conflict](orval-inline-body-conflict.md) — inline request body schemas in OpenAPI generate names that collide with the types barrel; always use named $ref schemas.

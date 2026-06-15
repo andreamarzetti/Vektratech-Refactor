@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { db, usersTable, businessesTable } from "@workspace/db";
 import { eq } from "drizzle-orm";
-import { requireAuth, loadUser } from "../middlewares/requireAuth";
+import { requireAuth } from "../middlewares/requireAuth";
 
 const router = Router();
 
@@ -14,6 +14,29 @@ async function getOrCreateUser(clerkId: string, email?: string) {
     role: "client",
   }).returning();
   return created;
+}
+
+function generateSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 50);
+}
+
+async function generateUniqueSlug(name: string): Promise<string> {
+  const base = generateSlug(name);
+  let slug = base;
+  let attempt = 0;
+  while (attempt < 10) {
+    const [existing] = await db.select({ id: businessesTable.id }).from(businessesTable).where(eq(businessesTable.slug, slug));
+    if (!existing) return slug;
+    attempt++;
+    slug = `${base}-${attempt}`;
+  }
+  return `${base}-${Date.now()}`;
 }
 
 router.get("/me", requireAuth, async (req, res) => {
@@ -38,6 +61,7 @@ router.get("/me", requireAuth, async (req, res) => {
         sector: business.sector,
         plan: business.plan,
         status: business.status,
+        slug: business.slug,
         createdAt: business.createdAt,
       } : null,
     });
@@ -91,12 +115,15 @@ router.post("/me/onboard", requireAuth, async (req, res) => {
       return;
     }
 
+    const slug = await generateUniqueSlug(businessName);
+
     const [business] = await db.insert(businessesTable).values({
       ownerId: user.id,
       name: businessName,
       sector,
       plan: plan ?? "starter",
       status: "trial",
+      slug,
     }).returning();
 
     res.status(201).json({
@@ -110,6 +137,7 @@ router.post("/me/onboard", requireAuth, async (req, res) => {
         sector: business.sector,
         plan: business.plan,
         status: business.status,
+        slug: business.slug,
         createdAt: business.createdAt,
       },
     });

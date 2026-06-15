@@ -1,0 +1,300 @@
+FASE 2 - VEKTRAHUB ENTERPRISE
+
+Quiero transformar VektraHub en una plataforma SaaS premium comparable o superior a Pedix.
+
+OBJETIVO:
+
+Que parezca una empresa tecnológica seria y no un proyecto personal.
+
+=================================================
+LANDING PAGE PREMIUM
+====================
+
+Inspirarse en:
+
+* Pedix
+* Shopify
+* Tiendanube
+* Stripe
+* Linear
+
+La home debe tener:
+
+Hero principal.
+
+Título:
+
+"Vendé más con tu propia tienda online impulsada por IA"
+
+Subtítulo:
+
+"Creá tu tienda en minutos, recibí pedidos, cobrá online y automatizá la atención con inteligencia artificial."
+
+Botones:
+
+* Probar demo
+* Ver precios
+
+=================================================
+SECCIÓN DEMOS
+=============
+
+Crear demos completas para:
+
+* Restaurante
+* Dietética
+* Ferretería
+* Kiosco
+* Tienda de ropa
+* Distribuidora
+
+Cada demo debe parecer un negocio real.
+
+Con:
+
+* Logo
+* Banner
+* Categorías
+* Productos
+* Stock
+* Promociones
+* Checkout completo
+
+=================================================
+GENERADOR DE TIENDAS
+====================
+
+Cuando un cliente se registra:
+
+Crear automáticamente:
+
+subdominio
+
+cliente.vektrahub.com
+
+o
+
+cliente.vektratech.com.ar
+
+Panel listo para usar.
+
+=================================================
+TIENDAS VISUALMENTE MÁS LINDAS
+==============================
+
+Diseño similar a:
+
+Tiendanube
+Shopify
+Pedix
+
+Agregar:
+
+* Banner principal
+* Logo circular
+* Categorías visuales
+* Buscador
+* Productos destacados
+* Productos más vendidos
+* Promociones
+* Reseñas
+* WhatsApp flotante
+
+=================================================
+CHECKOUT PROFESIONAL
+====================
+
+PASO 1
+
+Datos personales
+
+* Nombre
+* Apellido
+* Teléfono
+* Email
+
+PASO 2
+
+Entrega
+
+* Retiro en local
+* Delivery
+* Envío
+
+PASO 3
+
+Pago
+
+* Efectivo
+* Transferencia
+* Mercado Pago
+* Tarjeta
+* Ualá
+
+PASO 4
+
+Resumen
+
+Mostrar:
+
+* Productos
+* Cantidad
+* Descuentos
+* Envío
+* Total
+
+=================================================
+PEDIDOS POR WHATSAPP
+====================
+
+Cuando finaliza la compra:
+
+Enviar automáticamente:
+
+Nombre
+Teléfono
+Productos
+Forma de pago
+Dirección
+
+al WhatsApp del comercio.
+
+Generar botón:
+
+"Enviar pedido por WhatsApp"
+
+=================================================
+MERCADO PAGO
+============
+
+Integrar Checkout Pro.
+
+Estados:
+
+* Pendiente
+* Pagado
+* Rechazado
+
+Actualizar automáticamente el pedido.
+
+=================================================
+IA COMERCIAL AVANZADA
+=====================
+
+La IA debe leer:
+
+* Productos
+* Categorías
+* Stock
+* Precios
+* Promociones
+* Horarios
+* Formas de pago
+
+La IA nunca debe inventar datos.
+
+Ejemplos:
+
+"Tengo $20.000"
+
+"Busco algo económico"
+
+"¿Qué me recomendás?"
+
+"¿Cuál es el más vendido?"
+
+La IA debe responder usando información real del catálogo.
+
+=================================================
+CRM
+===
+
+Agregar CRM completo.
+
+Clientes.
+
+Historial de compras.
+
+Clientes frecuentes.
+
+Clientes inactivos.
+
+Segmentación.
+
+=================================================
+ANALYTICS
+=========
+
+Dashboard con:
+
+Facturación.
+
+Ventas.
+
+Productos más vendidos.
+
+Clientes nuevos.
+
+Conversión.
+
+Ticket promedio.
+
+=================================================
+ADMIN VEKTRAHUB
+===============
+
+Panel exclusivo.
+
+Gestionar:
+
+* Clientes
+* Suscripciones
+* Pagos
+* Suspensiones
+* Planes
+
+=================================================
+MULTIEMPRESA
+============
+
+Cada negocio aislado.
+
+Nunca compartir información entre clientes.
+
+=================================================
+AUTENTICACIÓN REAL
+==================
+
+* Registro
+* Login
+* Logout
+* Recuperar contraseña
+* Roles
+* Sesiones seguras
+* Contraseñas encriptadas
+
+=================================================
+DISEÑO
+======
+
+Eliminar aspecto oscuro excesivo.
+
+Usar diseño SaaS moderno:
+
+* Blanco
+* Gris claro
+* Azul eléctrico
+* Violeta suave
+
+Inspirado en:
+
+Stripe
+Shopify
+Linear
+
+La plataforma debe transmitir:
+
+Confianza
+Tecnología
+Profesionalismo
+Escalabilidad

@@ -302,6 +302,201 @@ export interface AdminStats {
   newThisMonth: number;
 }
 
+export interface StoreInfo {
+  name: string;
+  sector: string;
+  /** @nullable */
+  whatsappNumber?: string | null;
+  /** @nullable */
+  shippingCost?: number | null;
+  /** @nullable */
+  cashDiscount?: number | null;
+  /** @nullable */
+  bankAlias?: string | null;
+  /** @nullable */
+  bankHolder?: string | null;
+  plan: string;
+  hasMpEnabled: boolean;
+}
+
+export type StoreOrderInputDeliveryType = typeof StoreOrderInputDeliveryType[keyof typeof StoreOrderInputDeliveryType];
+
+
+export const StoreOrderInputDeliveryType = {
+  local: 'local',
+  pickup: 'pickup',
+  delivery: 'delivery',
+} as const;
+
+export type StoreOrderInputDeliveryAddress = {
+  street: string;
+  number: string;
+  floor?: string;
+  apt?: string;
+  city: string;
+  zip?: string;
+};
+
+export type StoreOrderInputPaymentMethod = typeof StoreOrderInputPaymentMethod[keyof typeof StoreOrderInputPaymentMethod];
+
+
+export const StoreOrderInputPaymentMethod = {
+  cash: 'cash',
+  transfer: 'transfer',
+  mercadopago: 'mercadopago',
+  debit: 'debit',
+  credit: 'credit',
+} as const;
+
+export type StoreOrderInputInvoiceData = {
+  razonSocial?: string;
+  cuit?: string;
+  address?: string;
+};
+
+export interface StoreOrderInput {
+  customerName: string;
+  customerPhone: string;
+  customerEmail?: string;
+  items: OrderItem[];
+  deliveryType: StoreOrderInputDeliveryType;
+  deliveryAddress?: StoreOrderInputDeliveryAddress;
+  paymentMethod: StoreOrderInputPaymentMethod;
+  couponCode?: string;
+  discountAmount?: number;
+  shippingAmount?: number;
+  needsInvoice?: boolean;
+  invoiceData?: StoreOrderInputInvoiceData;
+  notes?: string;
+}
+
+export interface StoreOrderResult {
+  id: number;
+  customerName: string;
+  total: number;
+  status: string;
+  /** @nullable */
+  ownerWhatsappUrl?: string | null;
+  createdAt: string;
+}
+
+export interface ValidateCouponInput {
+  code: string;
+  subtotal: number;
+}
+
+export interface MpPreferenceInput {
+  items: OrderItem[];
+  backUrl: string;
+}
+
+export type CouponValidationType = typeof CouponValidationType[keyof typeof CouponValidationType];
+
+
+export const CouponValidationType = {
+  percentage: 'percentage',
+  fixed: 'fixed',
+} as const;
+
+export interface CouponValidation {
+  valid: boolean;
+  type?: CouponValidationType;
+  value?: number;
+  discountAmount?: number;
+  message: string;
+}
+
+export interface MpPreferenceResponse {
+  initPoint: string;
+  preferenceId: string;
+}
+
+export interface BusinessConfig {
+  id: number;
+  name: string;
+  sector: string;
+  plan: string;
+  status: string;
+  /** @nullable */
+  slug?: string | null;
+  /** @nullable */
+  whatsappNumber?: string | null;
+  /** @nullable */
+  shippingCost?: number | null;
+  /** @nullable */
+  cashDiscount?: number | null;
+  /** @nullable */
+  bankAlias?: string | null;
+  /** @nullable */
+  bankHolder?: string | null;
+  hasMpToken: boolean;
+}
+
+export interface BusinessConfigUpdate {
+  slug?: string;
+  whatsappNumber?: string;
+  shippingCost?: number;
+  cashDiscount?: number;
+  bankAlias?: string;
+  bankHolder?: string;
+  mpAccessToken?: string;
+}
+
+export type CouponType = typeof CouponType[keyof typeof CouponType];
+
+
+export const CouponType = {
+  percentage: 'percentage',
+  fixed: 'fixed',
+} as const;
+
+export interface Coupon {
+  id: number;
+  code: string;
+  type: CouponType;
+  value: number;
+  active: boolean;
+  /** @nullable */
+  maxUses?: number | null;
+  usedCount: number;
+  /** @nullable */
+  expiresAt?: string | null;
+  createdAt: string;
+}
+
+export type CouponInputType = typeof CouponInputType[keyof typeof CouponInputType];
+
+
+export const CouponInputType = {
+  percentage: 'percentage',
+  fixed: 'fixed',
+} as const;
+
+export interface CouponInput {
+  code: string;
+  type: CouponInputType;
+  value: number;
+  maxUses?: number;
+  expiresAt?: string;
+}
+
+export type CouponUpdateType = typeof CouponUpdateType[keyof typeof CouponUpdateType];
+
+
+export const CouponUpdateType = {
+  percentage: 'percentage',
+  fixed: 'fixed',
+} as const;
+
+export interface CouponUpdate {
+  code?: string;
+  type?: CouponUpdateType;
+  value?: number;
+  active?: boolean;
+  maxUses?: number;
+  expiresAt?: string;
+}
+
 export type ListProductsParams = {
 category?: string;
 search?: string;

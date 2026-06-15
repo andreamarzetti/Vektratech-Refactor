@@ -463,6 +463,244 @@ paths:
               schema:
                 $ref: "#/components/schemas/AdminStats"
 
+  /store/{slug}:
+    get:
+      operationId: getStoreInfo
+      tags: [store]
+      summary: Get public store info
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Store info
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StoreInfo"
+        "404":
+          description: Not found
+
+  /store/{slug}/products:
+    get:
+      operationId: listStoreProducts
+      tags: [store]
+      summary: Get public catalog
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /store/{slug}/orders:
+    post:
+      operationId: createStoreOrder
+      tags: [store]
+      summary: Create an order from the public store
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StoreOrderInput"
+      responses:
+        "201":
+          description: Order created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StoreOrderResult"
+
+  /store/{slug}/chat:
+    post:
+      operationId: storeChat
+      tags: [store]
+      summary: AI chat for the public store
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChatMessageInput"
+      responses:
+        "200":
+          description: Chat response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatResponse"
+
+  /store/{slug}/validate-coupon:
+    post:
+      operationId: validateStoreCoupon
+      tags: [store]
+      summary: Validate a coupon
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ValidateCouponInput"
+      responses:
+        "200":
+          description: Coupon result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CouponValidation"
+
+  /store/{slug}/mp/preference:
+    post:
+      operationId: createMpPreference
+      tags: [store]
+      summary: Create a Mercado Pago preference
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MpPreferenceInput"
+      responses:
+        "200":
+          description: MP preference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MpPreferenceResponse"
+
+  /me/business:
+    get:
+      operationId: getBusinessConfig
+      tags: [businesses]
+      summary: Get business configuration
+      responses:
+        "200":
+          description: Business config
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessConfig"
+        "401":
+          description: Unauthorized
+    patch:
+      operationId: updateBusinessConfig
+      tags: [businesses]
+      summary: Update business configuration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BusinessConfigUpdate"
+      responses:
+        "200":
+          description: Updated config
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessConfig"
+
+  /me/coupons:
+    get:
+      operationId: listCoupons
+      tags: [businesses]
+      summary: List coupons for the current business
+      responses:
+        "200":
+          description: Coupons
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Coupon"
+        "401":
+          description: Unauthorized
+    post:
+      operationId: createCoupon
+      tags: [businesses]
+      summary: Create a coupon
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CouponInput"
+      responses:
+        "201":
+          description: Coupon created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Coupon"
+
+  /me/coupons/{id}:
+    patch:
+      operationId: updateCoupon
+      tags: [businesses]
+      summary: Update a coupon
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CouponUpdate"
+      responses:
+        "200":
+          description: Updated coupon
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Coupon"
+    delete:
+      operationId: deleteCoupon
+      tags: [businesses]
+      summary: Delete a coupon
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      responses:
+        "204":
+          description: Deleted
+
 components:
   schemas:
     HealthStatus:
@@ -882,3 +1120,169 @@ components:
         - starterPlan
         - proPlan
         - newThisMonth
+
+    StoreInfo:
+      type: object
+      properties:
+        name: { type: string }
+        sector: { type: string }
+        whatsappNumber: { type: ["string", "null"] }
+        shippingCost: { type: ["number", "null"] }
+        cashDiscount: { type: ["integer", "null"] }
+        bankAlias: { type: ["string", "null"] }
+        bankHolder: { type: ["string", "null"] }
+        plan: { type: string }
+        hasMpEnabled: { type: boolean }
+      required: [name, sector, plan, hasMpEnabled]
+
+    StoreOrderInput:
+      type: object
+      properties:
+        customerName: { type: string }
+        customerPhone: { type: string }
+        customerEmail: { type: string }
+        items:
+          type: array
+          items: { $ref: "#/components/schemas/OrderItem" }
+        deliveryType:
+          type: string
+          enum: [local, pickup, delivery]
+        deliveryAddress:
+          type: object
+          properties:
+            street: { type: string }
+            number: { type: string }
+            floor: { type: string }
+            apt: { type: string }
+            city: { type: string }
+            zip: { type: string }
+          required: [street, number, city]
+        paymentMethod:
+          type: string
+          enum: [cash, transfer, mercadopago, debit, credit]
+        couponCode: { type: string }
+        discountAmount: { type: number }
+        shippingAmount: { type: number }
+        needsInvoice: { type: boolean }
+        invoiceData:
+          type: object
+          properties:
+            razonSocial: { type: string }
+            cuit: { type: string }
+            address: { type: string }
+        notes: { type: string }
+      required: [customerName, customerPhone, items, deliveryType, paymentMethod]
+
+    StoreOrderResult:
+      type: object
+      properties:
+        id: { type: integer }
+        customerName: { type: string }
+        total: { type: number }
+        status: { type: string }
+        ownerWhatsappUrl: { type: ["string", "null"] }
+        createdAt: { type: string, format: date-time }
+      required: [id, customerName, total, status, createdAt]
+
+    ValidateCouponInput:
+      type: object
+      properties:
+        code: { type: string }
+        subtotal: { type: number }
+      required: [code, subtotal]
+
+    MpPreferenceInput:
+      type: object
+      properties:
+        items:
+          type: array
+          items: { $ref: "#/components/schemas/OrderItem" }
+        backUrl: { type: string }
+      required: [items, backUrl]
+
+    CouponValidation:
+      type: object
+      properties:
+        valid: { type: boolean }
+        type:
+          type: string
+          enum: [percentage, fixed]
+        value: { type: number }
+        discountAmount: { type: number }
+        message: { type: string }
+      required: [valid, message]
+
+    MpPreferenceResponse:
+      type: object
+      properties:
+        initPoint: { type: string }
+        preferenceId: { type: string }
+      required: [initPoint, preferenceId]
+
+    BusinessConfig:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        sector: { type: string }
+        plan: { type: string }
+        status: { type: string }
+        slug: { type: ["string", "null"] }
+        whatsappNumber: { type: ["string", "null"] }
+        shippingCost: { type: ["number", "null"] }
+        cashDiscount: { type: ["integer", "null"] }
+        bankAlias: { type: ["string", "null"] }
+        bankHolder: { type: ["string", "null"] }
+        hasMpToken: { type: boolean }
+      required: [id, name, sector, plan, status, hasMpToken]
+
+    BusinessConfigUpdate:
+      type: object
+      properties:
+        slug: { type: string }
+        whatsappNumber: { type: string }
+        shippingCost: { type: number }
+        cashDiscount: { type: integer }
+        bankAlias: { type: string }
+        bankHolder: { type: string }
+        mpAccessToken: { type: string }
+
+    Coupon:
+      type: object
+      properties:
+        id: { type: integer }
+        code: { type: string }
+        type:
+          type: string
+          enum: [percentage, fixed]
+        value: { type: number }
+        active: { type: boolean }
+        maxUses: { type: ["integer", "null"] }
+        usedCount: { type: integer }
+        expiresAt: { type: ["string", "null"], format: date-time }
+        createdAt: { type: string, format: date-time }
+      required: [id, code, type, value, active, usedCount, createdAt]
+
+    CouponInput:
+      type: object
+      properties:
+        code: { type: string }
+        type:
+          type: string
+          enum: [percentage, fixed]
+        value: { type: number }
+        maxUses: { type: integer }
+        expiresAt: { type: string, format: date-time }
+      required: [code, type, value]
+
+    CouponUpdate:
+      type: object
+      properties:
+        code: { type: string }
+        type:
+          type: string
+          enum: [percentage, fixed]
+        value: { type: number }
+        active: { type: boolean }
+        maxUses: { type: integer }
+        expiresAt: { type: string, format: date-time }
