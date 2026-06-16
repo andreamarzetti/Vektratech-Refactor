@@ -20,6 +20,7 @@ import Contacto from "@/pages/marketing/Contacto";
 import Nosotros from "@/pages/marketing/Nosotros";
 import Funcionalidades from "@/pages/marketing/Funcionalidades";
 import CasosDeExito from "@/pages/marketing/CasosDeExito";
+import Templates from "@/pages/marketing/Templates";
 
 // App (client) pages
 import Dashboard from "@/pages/app/Dashboard";
@@ -255,6 +256,7 @@ function ClerkProviderWithRoutes() {
             {/* Public store */}
             <Route path="/tienda/:slug" component={StoreFront} />
 
+            <Route path="/plantillas" component={Templates} />
             <Route path="/soluciones" component={Soluciones} />
             <Route path="/demos/:rubro" component={DemoRubro} />
             <Route path="/demos" component={Demos} />
