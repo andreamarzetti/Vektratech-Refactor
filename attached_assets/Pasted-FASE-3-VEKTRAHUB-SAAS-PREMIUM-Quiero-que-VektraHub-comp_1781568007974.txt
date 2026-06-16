@@ -1,0 +1,426 @@
+FASE 3 - VEKTRAHUB SAAS PREMIUM
+
+Quiero que VektraHub compita visual y funcionalmente con Pedix, Tiendanube y Shopify.
+
+No quiero una simple landing ni un catálogo básico.
+
+Quiero una plataforma SaaS moderna, profesional y escalable.
+
+=================================================
+DISEÑO GENERAL
+==============
+
+Cambiar el diseño oscuro actual.
+
+Usar diseño SaaS premium.
+
+Inspiración:
+
+* Shopify
+* Stripe
+* Linear
+* Tiendanube
+* Pedix
+
+Paleta:
+
+Primario:
+#2563EB
+
+Secundario:
+#7C3AED
+
+Éxito:
+#10B981
+
+Fondos:
+#FFFFFF
+#F8FAFC
+
+El sitio debe transmitir:
+
+* confianza
+* profesionalismo
+* tecnología
+* facilidad de uso
+
+=================================================
+PÁGINA DE INICIO
+================
+
+Hero premium.
+
+Título:
+
+"Creá tu tienda online impulsada por IA y vendé más."
+
+Subtítulo:
+
+"Recibí pedidos, cobrá online, automatizá tu negocio y gestioná todo desde una sola plataforma."
+
+Botones:
+
+* Probar demo
+* Ver precios
+
+Agregar:
+
+* logos de clientes
+* métricas
+* testimonios
+* beneficios
+* CTA final
+
+=================================================
+PLANTILLAS PROFESIONALES
+========================
+
+Crear página:
+
+/templates
+
+Mostrar plantillas completas:
+
+* Restaurante Premium
+* Dietética Premium
+* Ferretería Pro
+* Tienda de Ropa
+* Distribuidora
+* Kiosco
+
+Cada plantilla debe tener:
+
+* banner
+* logo
+* categorías
+* productos
+* checkout
+* carrito
+
+=================================================
+DEMOS PROFESIONALES
+===================
+
+Mejorar completamente las demos.
+
+Cada demo debe parecer un negocio real.
+
+Agregar:
+
+* imágenes reales
+* banners personalizados
+* promociones
+* categorías visuales
+* productos destacados
+* productos más vendidos
+* stock visible
+* opiniones
+* WhatsApp flotante
+
+Cada demo con identidad propia.
+
+Restaurante:
+colores cálidos.
+
+Dietética:
+verde y blanco.
+
+Ferretería:
+gris y azul.
+
+Indumentaria:
+minimalista.
+
+Distribuidora:
+corporativo.
+
+=================================================
+ONBOARDING AUTOMÁTICO
+=====================
+
+Cuando un cliente crea una cuenta:
+
+1.
+
+Selecciona rubro.
+
+2.
+
+Selecciona plan.
+
+3.
+
+La plataforma genera automáticamente:
+
+* logo temporal
+* categorías
+* productos demo
+* colores
+* banner
+
+4.
+
+Se crea su tienda lista para usar.
+
+=================================================
+CHECKOUT ENTERPRISE
+===================
+
+Crear checkout moderno.
+
+PASO 1
+
+Datos personales.
+
+Nombre.
+Apellido.
+Teléfono.
+Email.
+
+PASO 2
+
+Entrega.
+
+Retiro.
+Delivery.
+Envío.
+
+PASO 3
+
+Pago.
+
+Efectivo.
+Transferencia.
+Mercado Pago.
+Tarjeta.
+Ualá.
+
+PASO 4
+
+Resumen.
+
+Productos.
+Subtotal.
+Descuentos.
+Envío.
+Total.
+
+=================================================
+WHATSAPP AUTOMÁTICO
+===================
+
+Al finalizar el pedido:
+
+Enviar automáticamente al comercio:
+
+* nombre
+* teléfono
+* dirección
+* productos
+* método de pago
+* total
+
+Generar mensaje profesional.
+
+=================================================
+MERCADO PAGO
+============
+
+Integrar Mercado Pago Checkout Pro.
+
+Estados:
+
+* pendiente
+* aprobado
+* rechazado
+
+Actualizar automáticamente los pedidos.
+
+=================================================
+PLANES
+======
+
+Agregar mensual y anual.
+
+Starter
+
+$24.990
+
+Pro
+
+$49.990
+
+Enterprise
+
+$89.990
+
+Mostrar:
+
+Mensual
+
+Anual
+
+Con:
+
+2 meses gratis
+
+o
+
+20% OFF
+
+Mostrar ahorro anual.
+
+=================================================
+IA AVANZADA
+===========
+
+La IA debe actuar como vendedor virtual.
+
+Leer:
+
+* productos
+* stock
+* precios
+* promociones
+* horarios
+* métodos de pago
+
+Responder preguntas naturales.
+
+Ejemplos:
+
+¿Qué me recomendás?
+
+Tengo $20.000
+
+¿Cuál es el más vendido?
+
+¿Cuál es el más económico?
+
+¿Qué promociones tienen?
+
+No inventar información.
+
+=================================================
+CRM
+===
+
+Agregar CRM.
+
+Clientes frecuentes.
+
+Clientes inactivos.
+
+Historial de compras.
+
+Segmentación.
+
+=================================================
+ESTADÍSTICAS
+============
+
+Dashboard moderno.
+
+Facturación.
+
+Ventas.
+
+Pedidos.
+
+Ticket promedio.
+
+Productos más vendidos.
+
+Clientes nuevos.
+
+=================================================
+ADMINISTRADOR
+=============
+
+Panel exclusivo VektraHub.
+
+Gestionar:
+
+* clientes
+* planes
+* pagos
+* suscripciones
+* suspensiones
+* demos
+
+=================================================
+MULTIEMPRESA
+============
+
+Cada cliente debe tener datos totalmente aislados.
+
+Nunca compartir información entre negocios.
+
+=================================================
+DOMINIOS
+========
+
+Permitir:
+
+mitienda.com
+
+o
+
+cliente.vektrahub.com
+
+=================================================
+MÓDULO DE RESEÑAS
+=================
+
+Agregar reseñas públicas.
+
+Puntaje.
+
+Comentarios.
+
+Valoraciones.
+
+=================================================
+MÓDULO DE CUPONES
+=================
+
+Crear cupones:
+
+* porcentaje
+* monto fijo
+
+Aplicación automática.
+
+=================================================
+SEO
+===
+
+Cada tienda debe tener:
+
+* meta title
+* meta description
+* Open Graph
+* sitemap
+* robots
+
+=================================================
+PERFORMANCE
+===========
+
+Optimizar:
+
+* Lighthouse 90+
+* SEO 90+
+* Performance 90+
+
+=================================================
+OBJETIVO FINAL
+==============
+
+Quiero que cualquier comercio vea la plataforma y piense:
+
+"Esto parece un producto profesional como Shopify o Pedix."
+
+No quiero que parezca un proyecto de estudiante.
+
+Quiero una experiencia SaaS premium lista para vender.
